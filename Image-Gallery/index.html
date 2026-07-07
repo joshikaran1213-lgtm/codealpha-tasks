@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <!-- Filter Buttons (Bonus) -->
+    <div class="buttons">
+        <button onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('nature')">Nature</button>
+        <button onclick="filterSelection('city')">City</button>
+        <button onclick="filterSelection('animals')">Animals</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <div class="image nature">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvI55tpGnChX65YhFsd0pyBFPxcdo7x0MNRrAAVpuNoQ&s=10" alt="Nature" onclick="openLightbox(0)">
+        </div>
+
+        <div class="image city">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ93_RFvUcDXYJMcT2xUIL9IxrJuzK7Lm-qil15GKf0SQ&s=10" alt="City" onclick="openLightbox(1)">
+        </div>
+
+        <div class="image animals">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZyZhgR7A1JBW14HaHk1Q56mCYiqFTH7tqwIHVadQ_g&s=10" alt="Animal" onclick="openLightbox(2)">
+        </div>
+
+        <div class="image nature">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5MzwpePG1N9kfTexgxJrnNoa2hEBXGBos_bW9Agh32Q&s=10" alt="Nature" onclick="openLightbox(3)">
+        </div>
+
+        <div class="image city">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6U1eS5PmJrnPnzyKFj_1g4YmjUPcHb8QYUnrRb34YQ&s=10" alt="City" onclick="openLightbox(4)">
+        </div>
+
+        <div class="image animals">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzZUJcMQjnCdKm16BZB4tCvQVCFoAUcsPgm0HQ2tbTw&s=10" alt="Animal" onclick="openLightbox(5)">
+        </div>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <img id="lightbox-img">
+
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
